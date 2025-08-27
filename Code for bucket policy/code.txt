@@ -1,0 +1,22 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowDemoUser",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::798212520653:user/DemoUser"
+            },
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::my-projectt01",
+                "arn:aws:s3:::my-projectt01/*"
+            ]
+        }
+    ]
+}
